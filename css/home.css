@@ -1,0 +1,37 @@
+/* css/home.css — styles for index page layout and hero to match the screenshot */
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:8px}
+.logo .dot{width:18px;height:18px;border-radius:50%;display:inline-block}
+.logo .dot.green{background: #10c54b}
+.logo .brand{font-weight:700;margin-left:6px;font-size:18px}
+.city{background:transparent;border:0;color:var(--muted);margin-left:12px;font-size:14px}
+.right{display:flex;align-items:center;gap:12px}
+.right .login{background:#f3f3f5;border-radius:8px;padding:6px 12px;border:0}
+.right .search{background:transparent;border:0;font-size:18px}
+
+.categories{display:flex;align-items:center;gap:18px;padding:18px 0}
+.pill{background:#f0e8ff;color:var(--accent);border-radius:999px;padding:10px 20px;border:0;font-weight:600}
+.pill.active{background:var(--accent);color:#fff}
+.cats{display:flex;gap:18px;align-items:center}
+.cats a{color:var(--muted);font-weight:500}
+
+.hero{margin:18px 0}
+.hero-wrap{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(16,21,30,0.06)}
+.hero-image{height:420px;background:linear-gradient(180deg,#cfdbe2 0%,#d7dde1 60%);background-size:cover;background-position:center;border-radius:14px}
+/* Decorative fake banner elements to emulate screenshot */
+.hero-info{position:absolute;right:36px;bottom:28px;color:#fff;text-align:right}
+.hero-meta{font-weight:800;letter-spacing:1px;color:#fff;font-size:22px;opacity:0.95}
+.hero-meta .date{color:#ffd54a;margin-left:8px;font-weight:900}
+.hero-title{font-size:56px;line-height:0.9;margin-top:6px;color:#ffd54a;text-shadow:0 6px 0 rgba(0,0,0,0.25)}
+.hero-sub{font-size:24px;color:#fff;font-weight:800;margin-top:8px;letter-spacing:1px;text-shadow:0 3px 0 rgba(0,0,0,0.18)}
+
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:0;box-shadow:0 6px 18px rgba(16,21,30,0.08);font-size:24px}
+.hero-arrow.left{left:16px}
+.hero-arrow.right{right:16px}
+
+@media (max-width:800px){
+  .hero-title{font-size:32px}
+  .hero-image{height:300px}
+  .container{padding:0 14px}
+  .cats{display:none}
+}

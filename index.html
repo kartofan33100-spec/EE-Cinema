@@ -1,14 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EE Cinema</title>
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EE Cinema</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <h1>ПРИВЕ</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="left">
+        <span class="logo">
+          <span class="dot green"></span>
+          <span class="dot green"></span>
+          <span class="brand">EE Cinema</span>
+        </span>
+        <button class="city">Астана ▾</button>
+      </div>
+      <div class="right">
+        <button class="lang">РУС ▾</button>
+        <button class="search" aria-label="search">🔍</button>
+        <button class="login">Войти</button>
+      </div>
+    </div>
+  </header>
 
-    <script src="js/script67.js"></script>
+  <nav class="container categories">
+    <button class="pill active">Все</button>
+    <ul class="cats">
+      <li><a href="pages/movies.html">Кино</a></li>
+      <li><a href="pages/concerts.html">Концерты</a></li>
+      <li><a href="pages/theatre.html">Театр</a></li>
+      <li><a href="pages/sport.html">Спорт</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-wrap">
+        <div class="hero-image" role="img" aria-label="banner"></div>
+        <button class="hero-arrow left">‹</button>
+        <button class="hero-arrow right">›</button>
+
+        <div class="hero-info">
+          <div class="hero-meta">CS 2 <span class="date">6/03</span></div>
+          <h1 class="hero-title">EMIRKHAN MADIYEV</h1>
+          <p class="hero-sub">НОВАЯ ЗВЕЗДА КИБЕРСПОРТА</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script67.js"></script>
 </body>
 </html>
