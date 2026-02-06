@@ -4,7 +4,7 @@ const banners = [
         date: "6/03",
         title: "EMIRKHAN MADIYEV",
         sub: "НОВАЯ ЗВЕЗДА КИБЕРСПОРТА",
-        image: "img/i.webp"
+        image: "img/main/i.webp"
     },
     {
         tag: "Кино",
