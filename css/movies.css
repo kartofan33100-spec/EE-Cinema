@@ -1,0 +1,100 @@
+.movies-page {
+    margin-top: 28px;
+}
+
+.movies-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.movies-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.filters {
+    background: transparent;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+/* GRID */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 22px;
+}
+
+/* CARD */
+.movie-card {
+    text-decoration: none;
+    color: #111;
+}
+
+.poster {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 2 / 3;
+    background: #e5e7eb;
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BADGES */
+.rating {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 14px;
+    background: #16a34a;
+    color: #fff;
+}
+
+.rating.green {
+    background: #16a34a;
+}
+
+.rating.yellow {
+    background: #facc15;
+    color: #111;
+}
+
+.age {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    background: #ef4444;
+    color: #fff;
+}
+
+.age.blue {
+    background: #3b82f6;
+}
+
+.movie-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.movie-card p {
+    margin-top: 4px;
+    color: #6b7280;
+    font-size: 14px;
+}
