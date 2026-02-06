@@ -1,15 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Театр — EE Cinema</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Театр — EE Cinema</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/movies.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
-  <main class="container">
-    <h1>Театр (пустая страница)</h1>
-  </main>
+<header class="navbar">
+    <div class="container navbar__inner">
+        <a class="navbar__logo" href="/index.html" aria-label="EE Cinema">
+            <img class="navbar__logo-img" src="/./img/ee-cinema.png" alt="EE Cinema">
+        </a>
+        <form class="navbar__search" action="#" role="search">
+            <input
+                    class="navbar__search-input"
+                    type="search"
+                    placeholder="Поиск по фильмам, концертам, театру..."
+                    aria-label="Поиск"
+            />
+            <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
+        </form>
+        <div class="navbar__actions">
+            <a class="navbar__btn navbar__btn--ghost" href="login.html">Войти</a>
+            <a class="navbar__btn navbar__btn--primary" href="register.html">Регистрация</a>
+        </div>
+    </div>
+</header>
+<nav class="container categories">
+    <button class="pill active">Театр</button>
+    <ul class="cats">
+        <li><a href="../index.html">Все</a></li>
+        <li><a href="#">Спектакли</a></li>
+        <li><a href="#">Скоро</a></li>
+        <li><a href="#">Детям</a></li>
+    </ul>
+</nav>
+<main class="container movies-page">
+    <div class="movies-header">
+        <h1>Театр</h1>
+        <button class="filters">⚙️ Фильтры</button>
+    </div>
+    <section class="movies-grid">
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.0 ★</span>
+                <span class="age">18+</span>
+                <img src="../img/theatre/show1.jpg" alt="">
+            </div>
+            <h3>Невинный обман</h3>
+            <p>комедия</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">8.3 ★</span>
+                <span class="age">12+</span>
+                <img src="../img/theatre/show2.jpg" alt="">
+            </div>
+            <h3>Поэтический моноспектакль</h3>
+            <p>драма • поэзия</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.3 ★</span>
+                <span class="age blue">12+</span>
+                <img src="../img/theatre/show3.jpg" alt="">
+            </div>
+            <h3>Собачье сердце</h3>
+            <p>драма</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">8.9 ★</span>
+                <span class="age blue">16+</span>
+                <img src="../img/theatre/show4.jpg" alt="">
+            </div>
+            <h3>Мечта</h3>
+            <p>арт-спектакль</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.1 ★</span>
+                <span class="age">16+</span>
+                <img src="../img/theatre/show5.jpg" alt="">
+            </div>
+            <h3>Театральная арт-терапия</h3>
+            <p>экспериментальный</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">8.7 ★</span>
+                <span class="age">18+</span>
+                <img src="../img/theatre/show6.jpg" alt="">
+            </div>
+            <h3>Live Blues Kesh</h3>
+            <p>музыкальное действо</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.4 ★</span>
+                <span class="age">18+</span>
+                <img src="../img/theatre/show7.jpg" alt="">
+            </div>
+            <h3>Живое</h3>
+            <p>современный спектакль</p>
+        </a>
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">8.6 ★</span>
+                <span class="age">16+</span>
+                <img src="../img/theatre/show8.jpg" alt="">
+            </div>
+            <h3>Премьера! "Сиротливый зал"</h3>
+            <p>трагикомедия</p>
+        </a>
+    </section>
+</main>
 </body>
 </html>
