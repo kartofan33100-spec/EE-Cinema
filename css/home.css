@@ -110,11 +110,11 @@ body {
     font-weight: 700;
     cursor: pointer;
     background: #ede9fe;
-    color: #4c1d95;
+    color: #16a34a;
 }
 
 .pill.active {
-    background: #6d28d9;
+    background: #16a34a;
     color: #fff;
 }
 
@@ -184,29 +184,21 @@ body {
 
 .hero-info {
     position: absolute;
-    bottom: 42px;
-    left: 40%;
-    right: 120px;
+    bottom: 36px;
+    right: 110px;
+    max-width: 520px;
     text-align: right;
-    padding: 10px 12px;
-    border-radius: 14px;
-    background: linear-gradient(
-            90deg,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0.20) 50%,
-            rgba(0,0,0,0.32) 100%
-    );
 }
 
 .hero-meta {
     display: inline-flex;
     align-items: baseline;
-    gap: 18px;
+    gap: 12px;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.90);
-    font-size: 22px;
-    letter-spacing: 1px;
+    font-size: 16px;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .hero-meta .date {
@@ -214,54 +206,42 @@ body {
     font-weight: 900;
 }
 
+/* главный заголовок меньше + слабее тень */
 .hero-title {
-    margin-top: 12px;
+    margin-top: 10px;
+
     font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: clamp(34px, 4.6vw, 64px);
-    line-height: 1.02;
+    font-size: 56px;           /* было 64–76 */
+    line-height: 1.03;
+    letter-spacing: 1.2px;
+
     color: #f4c542;
-    text-shadow: 0 4px 0 rgba(0, 0, 0, 0.14);
+    text-transform: uppercase;
+
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .hero-sub {
     margin-top: 10px;
+
     font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    font-size: clamp(14px, 2vw, 22px);
+    font-size: 20px;           /* было 22–26 */
+    letter-spacing: 0.6px;
+
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.10);
 }
 
 @media (max-width: 900px) {
-    .hero-wrap {
-        height: 360px;
-    }
     .hero-info {
         right: 86px;
-        left: 18px;
+        bottom: 22px;
+        max-width: 90%;
     }
-    .hero-title {
-        font-size: 46px;
-    }
-    .hero-sub {
-        font-size: 18px;
-    }
-    .hero-meta {
-        font-size: 16px;
-    }
-}
 
-@media (max-width: 520px) {
-    .categories {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-    .hero-arrow {
-        width: 46px;
-        height: 46px;
-        font-size: 24px;
-    }
+    .hero-title { font-size: 42px; }
+    .hero-sub { font-size: 16px; }
+    .hero-meta { font-size: 14px; }
 }
