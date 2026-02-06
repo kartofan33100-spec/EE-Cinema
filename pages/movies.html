@@ -2,9 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кино — EE Cinema</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/movies.css">
 </head>
 <body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="left">
+            <span class="logo">
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="brand">EE Cinema</span>
+            </span>
+            <button class="city">Астана ▾</button>
+        </div>
+        <div class="right">
+            <button class="lang">РУС ▾</button>
+            <button class="search">🔍</button>
+            <button class="login">Войти</button>
+        </div>
+    </div>
+</header>
+
+<nav class="container categories">
+    <button class="pill active">Кино</button>
+    <ul class="cats">
+        <li><a href="../index.html">Все</a></li>
+        <li><a href="#">Сейчас</a></li>
+        <li><a href="#">Скоро</a></li>
+        <li><a href="#">Детям</a></li>
+    </ul>
+</nav>
+
+<main class="container movies-page">
+
+    <div class="movies-header">
+        <h1>Кино</h1>
+        <button class="filters">⚙️ Фильтры</button>
+    </div>
+
+    <section class="movies-grid">
+
+        <!-- Movie card -->
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.0 ★</span>
+                <span class="age">18+</span>
+                <img src="../img/movies/movie1.jpg" alt="">
+            </div>
+            <h3>Ғашықпын саған</h3>
+            <p>мелодрама</p>
+        </a>
+
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">7.7 ★</span>
+                <span class="age">18+</span>
+                <img src="../img/movies/movie2.jpg" alt="">
+            </div>
+            <h3>Убежище</h3>
+            <p>боевик • триллер</p>
+        </a>
+
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.3 ★</span>
+                <span class="age blue">14+</span>
+                <img src="../img/movies/movie3.jpg" alt="">
+            </div>
+            <h3>Тастамашы, ана!</h3>
+            <p>драма</p>
+        </a>
+
+        <a href="#" class="movie-card">
+            <div class="poster">
+                <span class="rating green">9.6 ★</span>
+                <span class="age blue">12+</span>
+                <img src="../img/movies/movie4.jpg" alt="">
+            </div>
+            <h3>Stray Kids: dominATE</h3>
+            <p>фильм-концерт</p>
+        </a>
+
+        <!-- копируй карточки дальше -->
+    </section>
+
+</main>
 
 </body>
 </html>
