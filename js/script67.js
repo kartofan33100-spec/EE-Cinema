@@ -11,21 +11,21 @@ const banners = [
         date: "10/03",
         title: "DUNE: PART TWO",
         sub: "ПРЕМЬЕРА В IMAX",
-        image: "img/banners/banner2.jpg"
+        image: "img/main/maxresdefault.jpg"
     },
     {
         tag: "Концерт",
         date: "14/03",
         title: "LIVE SHOW",
         sub: "БОЛЬШОЙ ТУР ПО ГОРОДАМ",
-        image: "img/banners/banner3.jpg"
+        image: "img/main/show.avif"
     },
     {
         tag: "Театр",
         date: "18/03",
         title: "HAMLET",
         sub: "КЛАССИКА НА НОВЫЙ ЛАД",
-        image: "img/banners/banner4.jpg"
+        image: "img/main/hamlet.jpg"
     }
 ];
 
