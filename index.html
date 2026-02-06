@@ -9,25 +9,29 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="left">
-        <span class="logo">
-          <span class="dot green"></span>
-          <span class="dot green"></span>
-          <span class="brand">EE Cinema</span>
-        </span>
-        <button class="city">Астана ▾</button>
-      </div>
-      <div class="right">
-        <button class="lang">РУС ▾</button>
-        <button class="search" aria-label="search">🔍</button>
-        <button class="login">Войти</button>
-      </div>
+<header class="navbar">
+    <div class="container navbar__inner">
+        <a class="navbar__logo" href="index.html" aria-label="EE Cinema">
+            <img class="navbar__logo-img" src="img/ee-cinema.png" alt="EE Cinema">
+        </a>
+        <form class="navbar__search" action="#" role="search">
+            <input
+                    class="navbar__search-input"
+                    type="search"
+                    placeholder="Поиск по фильмам, концертам, театру..."
+                    aria-label="Поиск"
+            />
+            <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
+        </form>
+        <div class="navbar__actions">
+            <a class="navbar__btn navbar__btn--ghost" href="login.html">Войти</a>
+            <a class="navbar__btn navbar__btn--primary" href="register.html">Регистрация</a>
+        </div>
     </div>
-  </header>
+</header>
   <nav class="container categories">
     <button class="pill active">Все</button>
     <ul class="cats">
