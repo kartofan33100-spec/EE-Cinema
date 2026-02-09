@@ -1,6 +1,7 @@
 :root {
     --container-width: 1200px;
-    --accent: #7a39ff;
+    --accent: #16a34a; /* primary green */
+    --accent-ditto: #15803d;
     --muted: #6b7280;
 }
 

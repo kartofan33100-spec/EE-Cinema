@@ -1,15 +1,162 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Концерты — EE Cinema</title>
+
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/movies.css">
+  <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
-  <main class="container">
-    <h1>Концерты (пустая страница)</h1>
-  </main>
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__logo" href="/index.html" aria-label="EE Cinema">
+      <img class="navbar__logo-img" src="/./img/ee-cinema.png" alt="EE Cinema">
+    </a>
+    <form class="navbar__search" action="#" role="search">
+      <input
+          class="navbar__search-input"
+          type="search"
+          placeholder="Поиск по фильмам, концертам, театру..."
+          aria-label="Поиск"
+      />
+      <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
+    </form>
+    <div class="navbar__actions">
+      <a class="navbar__btn navbar__btn--ghost" href="/login.html">Войти</a>
+      <a class="navbar__btn navbar__btn--primary" href="/register.html">Регистрация</a>
+    </div>
+  </div>
+</header>
+<nav class="container categories">
+  <ul class="cats">
+    <li><a href="/index.html">Все</a></li>
+    <li><a href="/pages/movies.html">Кино</a></li>
+    <li><a href="/pages/concerts.html" class="active">Концерты</a></li>
+    <li><a href="/pages/theatre.html">Театр</a></li>
+  </ul>
+</nav>
+<main class="container movies-page">
+  <div class="movies-header">
+    <h1>Концерты</h1>
+    <div class="filter-container">
+      <button class="filters" id="filterBtn">⚙️ Фильтры</button>
+      <div class="filter-dropdown" id="filterDropdown">
+        <button class="filter-option" data-genre="all">Все жанры</button>
+        <button class="filter-option" data-genre="pop">Поп</button>
+        <button class="filter-option" data-genre="rock">Рок</button>
+        <button class="filter-option" data-genre="classical">Классика</button>
+        <button class="filter-option" data-genre="electronic">Электро</button>
+        <button class="filter-option" data-genre="kids">Детям</button>
+      </div>
+    </div>
+  </div>
+  <section class="movies-grid">
+    <a href="#" class="movie-card" data-genre="pop">
+      <div class="poster">
+        <span class="price">от 12 000 ₸</span>
+        <span class="age">16+</span>
+        <img src="../img/main/concert1.jpg" alt="Концерт 1">
+      </div>
+      <h3>Большой концерт звезды</h3>
+      <p>Поп</p>
+    </a>
+
+    <a href="#" class="movie-card" data-genre="rock">
+      <div class="poster">
+        <span class="price">от 25 000 ₸</span>
+        <span class="age">18+</span>
+        <img src="../img/main/concert2.jpg" alt="Концерт 2">
+      </div>
+      <h3>Рок-вечер</h3>
+      <p>Рок</p>
+    </a>
+
+    <a href="#" class="movie-card" data-genre="classical">
+      <div class="poster">
+        <span class="price">от 8 000 ₸</span>
+        <span class="age">6+</span>
+        <img src="../img/main/concert3.jpg" alt="Концерт 3">
+      </div>
+      <h3>Филармония: вечер классики</h3>
+      <p>Классика</p>
+    </a>
+
+    <a href="#" class="movie-card" data-genre="electronic">
+      <div class="poster">
+        <span class="price">от 15 000 ₸</span>
+        <span class="age">16+</span>
+        <img src="../img/main/concert4.jpg" alt="Концерт 4">
+      </div>
+      <h3>Электро-ночь</h3>
+      <p>Электронная музыка</p>
+    </a>
+
+    <a href="#" class="movie-card" data-genre="kids">
+      <div class="poster">
+        <span class="price">от 3 500 ₸</span>
+        <span class="age">2+</span>
+        <img src="../img/main/concert5.jpg" alt="Концерт 5">
+      </div>
+      <h3>Детское шоу</h3>
+      <p>Детям</p>
+    </a>
+  </section>
+</main>
+<script>
+  // copy of filter & page-enter/exit logic adapted for concerts
+  const filterBtn = document.getElementById('filterBtn');
+  const filterDropdown = document.getElementById('filterDropdown');
+  const filterOptions = document.querySelectorAll('.filter-option');
+
+  filterBtn.addEventListener('click', () => {
+    filterDropdown.classList.toggle('show');
+    filterBtn.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.filter-container')) {
+      filterDropdown.classList.remove('show');
+      filterBtn.classList.remove('active');
+    }
+  });
+
+  filterOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+      const genre = e.target.dataset.genre;
+      filterOptions.forEach(opt => opt.classList.remove('selected'));
+      e.target.classList.add('selected');
+      const cards = document.querySelectorAll('.movie-card');
+      cards.forEach(card => {
+        if (genre === 'all') {
+          card.style.display = '';
+        } else {
+          const cardGenre = card.dataset.genre || '';
+          card.style.display = cardGenre.includes(genre) ? '' : 'none';
+        }
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('page-enter');
+    setTimeout(()=> document.body.classList.remove('page-enter'), 380);
+
+    document.querySelectorAll('.cats a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (!href) return;
+        e.preventDefault();
+        document.body.classList.add('page-exit');
+        setTimeout(()=> window.location.href = href, 320);
+      });
+    });
+  });
+</script>
 </body>
 </html>

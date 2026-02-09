@@ -1,0 +1,46 @@
+/* components.css — animations and small UI components */
+
+/* Page transitions */
+/* Default body must be visible to avoid blank pages; use helper classes for enter/exit animations. */
+body{
+	opacity:1;
+	transform:none;
+	transition:opacity 340ms ease, transform 340ms ease;
+}
+body.page-enter{
+	opacity:1;
+	transform:none;
+}
+body.page-exit{
+	opacity:0;
+	transform:translateY(6px);
+}
+
+/* Buttons */
+.navbar__btn, .pill, .filters, .filter-option, .navbar__search-btn{
+	transition:transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+.navbar__btn:active, .pill:active, .filters:active{
+	transform: scale(0.96);
+}
+
+/* Movie card interactions */
+.movie-card{display:block;transition:transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease}
+.movie-card:hover{transform:translateY(-6px);box-shadow:0 18px 30px rgba(16,24,40,0.08)}
+.movie-card:active{transform:translateY(-2px) scale(0.985)}
+
+.poster img{transition:transform 220ms ease, filter 220ms ease;display:block;width:100%;height:100%;object-fit:cover}
+.poster:hover img{transform:scale(1.06);filter:brightness(0.96)}
+
+/* Click ripple-lite (subtle) */
+.ripple{position:relative;overflow:hidden}
+.ripple:after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;background:rgba(255,255,255,0.15);border-radius:50%;transform:translate(-50%,-50%) scale(0);opacity:0;transition:transform 320ms ease,opacity 320ms ease}
+.ripple:active:after{transform:translate(-50%,-50%) scale(12);opacity:1;transition:transform 320ms ease,opacity 320ms ease}
+
+/* Small helper for fading elements */
+.fade{transition:opacity 220ms ease}
+
+/* Filter dropdown animation */
+.filter-dropdown{transform-origin:top left;transition:transform 180ms ease,opacity 180ms ease}
+.filter-dropdown.show{transform:scale(1);opacity:1}
+.filter-dropdown{transform:scale(0.98);opacity:0}
