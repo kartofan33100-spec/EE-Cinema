@@ -28,17 +28,17 @@
             <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
         </form>
         <div class="navbar__actions">
-            <a class="navbar__btn navbar__btn--ghost" href="login.html">Войти</a>
-            <a class="navbar__btn navbar__btn--primary" href="register.html">Регистрация</a>
+            <a class="navbar__btn navbar__btn--ghost" href="/pages/login.html">Войти</a>
+            <a class="navbar__btn navbar__btn--primary" href="/pages/register.html">Регистрация</a>
         </div>
     </div>
 </header>
-    <nav class="container categories">
+    <nav class="container_categories">
+        <button class="pill active">Все</button>
         <ul class="cats">
-            <li><a href="/index.html" class="active">Все</a></li>
-            <li><a href="/pages/movies.html">Кино</a></li>
-            <li><a href="/pages/concerts.html">Концерты</a></li>
-            <li><a href="/pages/theatre.html">Театр</a></li>
+            <li><a href="pages/movies.html">Кино</a></li>
+            <li><a href="pages/concerts.html">Концерты</a></li>
+            <li><a href="pages/theatre.html">Театр</a></li>
         </ul>
     </nav>
   <main class="container">
@@ -74,47 +74,5 @@
         setTimeout(()=> document.body.classList.remove('page-enter'), 380);
     });
   </script>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <a href="/index.html">EE Cinema</a>
-          <p>Ваш гид в мир кино</p>
-        </div>
-        <div class="footer-section">
-          <h3>О нас</h3>
-          <ul>
-            <li><a href="#">О компании</a></li>
-            <li><a href="/pages/return-policy.html">Правила возврата билета</a></li>
-            <li><a href="/pages/faq.html">FAQ</a></li>
-            <li><a href="/pages/public-offer.html">Публичный договор</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Интересное</h3>
-          <ul>
-            <li><a href="/pages/movies.html">Кино</a></li>
-            <li><a href="/pages/concerts.html">Концерты</a></li>
-            <li><a href="/pages/theatre.html">Театр</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Сотрудничество</h3>
-          <ul>
-            <li><a href="/pages/partner.html">Стать партнёром</a></li>
-            <li style="margin-top: 16px;"><strong>Социальные сети</strong></li>
-          </ul>
-          <div class="footer-social" style="margin-top: 12px;">
-            <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
-            <a href="https://tiktok.com" target="_blank" title="TikTok">🎵</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 EE Cinema. All rights reserved.</p>
-        <p>Разработано с ❤️ для кинолюбителей</p>
-      </div>
-    </div>
-  </footer>
 </body>
 </html> 

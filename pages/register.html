@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="ru">
+        <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Регистрация — EE Cinema</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container navbar__inner">
+        <a class="navbar__logo" href="../index.html" aria-label="EE Cinema">
+            <img class="navbar__logo-img" src="../img/ee-cinema.png" alt="EE Cinema">
+        </a>
+
+        <form class="navbar__search" action="#" role="search">
+            <input class="navbar__search-input" type="search" placeholder="Поиск по фильмам, концертам, театру..." aria-label="Поиск">
+            <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
+        </form>
+
+        <div class="navbar__actions">
+            <a class="navbar__btn navbar__btn--ghost" href="login.html">Войти</a>
+            <a class="navbar__btn navbar__btn--primary" href="register.html">Регистрация</a>
+        </div>
+    </div>
+</header>
+
+<main class="container auth">
+    <div class="auth-card">
+        <h1 class="auth-title">Регистрация</h1>
+        <p class="auth-subtitle">Создайте аккаунт и получайте уведомления о премьерах.</p>
+
+        <form id="registerForm" class="auth-form" novalidate>
+            <label class="field">
+                <span class="field__label">Имя</span>
+                <input class="field__input" type="text" name="name" placeholder="Ерасыл" />
+                <small class="field__error"></small>
+            </label>
+
+            <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="name@example.com" />
+                <small class="field__error"></small>
+            </label>
+
+            <label class="field">
+                <span class="field__label">Пароль</span>
+                <input class="field__input" type="password" name="password" placeholder="Минимум 4 символа" />
+                <small class="field__error"></small>
+            </label>
+
+            <div class="field">
+                <span class="field__label">Тип аккаунта</span>
+                <div class="radios">
+                    <label class="radio">
+                        <input type="radio" name="role" value="user" />
+                        <span class="radio__dot"></span>
+                        <span>Пользователь</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="role" value="organizer" />
+                        <span class="radio__dot"></span>
+                        <span>Организатор</span>
+                    </label>
+                </div>
+                <small class="field__error" id="roleError"></small>
+            </div>
+
+            <!-- checkbox обязателен -->
+            <label class="check">
+                <input class="check__input" type="checkbox" name="agree" />
+                <span class="check__box"></span>
+                <span class="check__text">Согласен с условиями и политикой</span>
+            </label>
+            <small class="field__error" id="agreeErrorReg"></small>
+
+            <button class="auth-btn" type="submit">Создать аккаунт</button>
+
+            <!-- вывод результата -->
+            <div class="auth-result" id="registerResult" aria-live="polite"></div>
+
+            <p class="auth-bottom">
+                Уже есть аккаунт? <a class="auth-link" href="login.html">Войти</a>
+            </p>
+        </form>
+    </div>
+</main>
+
+<script src="../js/login.js"></script>
+</body>
+</html>
