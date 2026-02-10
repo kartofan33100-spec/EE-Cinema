@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход — EE Cinema</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/login.css" />
 </head>
 <body>
 
+<header class="navbar">
+    <div class="container navbar__inner">
+        <a class="navbar__logo" href="../index.html" aria-label="EE Cinema">
+            <img class="navbar__logo-img" src="../img/ee-cinema.png" alt="EE Cinema">
+        </a>
+
+        <form class="navbar__search" action="#" role="search">
+            <input class="navbar__search-input" type="search" placeholder="Поиск по фильмам, концертам, театру..." aria-label="Поиск">
+            <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
+        </form>
+
+        <div class="navbar__actions">
+            <a class="navbar__btn navbar__btn--ghost" href="login.html">Войти</a>
+            <a class="navbar__btn navbar__btn--primary" href="register.html">Регистрация</a>
+        </div>
+    </div>
+</header>
+
+<main class="container auth">
+    <div class="auth-card">
+        <h1 class="auth-title">Вход</h1>
+        <p class="auth-subtitle">Войдите, чтобы покупать билеты быстрее.</p>
+
+        <form id="loginForm" class="auth-form" novalidate>
+            <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="name@example.com" />
+                <small class="field__error"></small>
+            </label>
+
+            <label class="field">
+                <span class="field__label">Пароль</span>
+                <input class="field__input" type="password" name="password" placeholder="Минимум 4 символа" />
+                <small class="field__error"></small>
+            </label>
+
+            <label class="check">
+                <input class="check__input" type="checkbox" name="agree" />
+                <span class="check__box"></span>
+                <span class="check__text">Я принимаю правила сервиса</span>
+            </label>
+            <small class="field__error" id="agreeError"></small>
+
+            <button class="auth-btn" type="submit">Войти</button>
+
+            <div class="auth-result" id="loginResult" aria-live="polite"></div>
+
+            <p class="auth-bottom">
+                Нет аккаунта? <a class="auth-link" href="register.html">Зарегистрироваться</a>
+            </p>
+        </form>
+    </div>
+</main>
+<script src="../js/login.js"></script>
 </body>
 </html>
