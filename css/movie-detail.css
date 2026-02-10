@@ -31,7 +31,7 @@
 }
 
 .info-section h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
     margin: 0 0 16px 0;
 }
@@ -297,9 +297,10 @@ tr:hover {
     font-style: italic;
     line-height: 1.8;
     color: #374151;
-    font-size: 15px;
+    font-size: 13px;
     margin: 0;
     letter-spacing: 0.3px;
+    max-width: 65%;
 }
 
 /* Reviews section styles */
@@ -352,7 +353,7 @@ tr:hover {
 
 .review-author-info h4 {
     margin: 0 0 4px 0;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     color: #111;
 }
@@ -380,7 +381,7 @@ tr:hover {
 }
 
 .review-text {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.6;
     color: #374151;
     margin: 0;
