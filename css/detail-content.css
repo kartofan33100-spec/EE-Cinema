@@ -1,0 +1,132 @@
+/* Styles for detail content pages (concert-detail, theatre-detail) */
+
+.concert-genre,
+.theatre-genre {
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.concert-venue,
+.theatre-venue {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.theatre-rating {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.ticket-info {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.ticket-date,
+.ticket-nearest {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ticket-time,
+.ticket-venue-info {
+    margin: 0 0 8px 0;
+    color: #6b7280;
+}
+
+.ticket-venue-label {
+    margin: 0 0 16px 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.ticket-price-label {
+    margin: 0 0 12px 0;
+}
+
+.ticket-price {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.buy-button {
+    background: var(--accent);
+    color: white;
+    border: 0;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.buy-button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.description-content {
+    font-style: italic;
+    color: #374151;
+    line-height: 1.8;
+    max-width: 65%;
+    margin: 0 0 20px 0;
+}
+
+.info-title {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.info-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #374151;
+    line-height: 1.8;
+}
+
+.theatre-info-box {
+    background: #f3f4f6;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.theatre-info-item {
+    margin: 0 0 12px 0;
+    color: #111;
+}
+
+.theatre-info-item-last {
+    margin: 0;
+    color: #111;
+}
+
+.info-label {
+    font-weight: 700;
+}
+
+.info-value {
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .description-content {
+        max-width: 100%;
+    }
+
+    .buy-button {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}

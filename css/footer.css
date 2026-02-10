@@ -70,6 +70,7 @@
 .footer-social {
     display: flex;
     gap: 16px;
+    margin-top: 12px;
 }
 
 .footer-social a {
@@ -88,6 +89,10 @@
 .footer-social a:hover {
     background: var(--accent);
     transform: translateY(-3px);
+}
+
+.footer-social-heading {
+    margin-top: 16px !important;
 }
 
 .footer-bottom {

@@ -11,193 +11,7 @@
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/footer.css">
-  <style>
-    .partner-page {
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: 50px auto;
-    }
-
-    .partner-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .partner-header h1 {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .partner-header p {
-      color: #6b7280;
-      font-size: 16px;
-    }
-
-    .partner-steps {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .partner-steps::before {
-      content: '';
-      position: absolute;
-      top: 20px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #e5e7eb;
-      z-index: 0;
-    }
-
-    .step {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      position: relative;
-      z-index: 1;
-      color: #6b7280;
-    }
-
-    .step.active {
-      background: var(--accent);
-      color: white;
-    }
-
-    .partner-form {
-      background: #f9fafb;
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .form-group {
-      margin-bottom: 24px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #111;
-      font-size: 14px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 14px;
-      transition: all 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .form-buttons {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .btn-choice {
-      flex: 1;
-      padding: 12px 16px;
-      border: 2px solid #e5e7eb;
-      background: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.2s;
-      color: #6b7280;
-    }
-
-    .btn-choice.active {
-      border-color: var(--accent);
-      background: rgba(34, 197, 94, 0.1);
-      color: var(--accent);
-    }
-
-    .btn-choice:hover {
-      border-color: var(--accent);
-    }
-
-    .form-actions {
-      display: flex;
-      gap: 12px;
-    }
-
-    .btn-submit {
-      flex: 1;
-      padding: 14px 24px;
-      background: var(--accent);
-      color: white;
-      border: 0;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.2s;
-    }
-
-    .btn-submit:hover {
-      background: #16a34a;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-    }
-
-    .btn-cancel {
-      flex: 1;
-      padding: 14px 24px;
-      background: white;
-      color: #6b7280;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.2s;
-    }
-
-    .btn-cancel:hover {
-      border-color: #d1d5db;
-      background: #f9fafb;
-    }
-
-    .form-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      color: #111;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/partner.css">
 </head>
 <body>
 <header class="navbar">
@@ -302,9 +116,9 @@
         <h3>Сотрудничество</h3>
         <ul>
           <li><a href="/pages/partner.html">Стать партнёром</a></li>
-          <li style="margin-top: 16px;"><strong>Социальные сети</strong></li>
+          <li class="footer-social-heading"><strong>Социальные сети</strong></li>
         </ul>
-        <div class="footer-social" style="margin-top: 12px;">
+        <div class="footer-social">
           <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
           <a href="https://tiktok.com" target="_blank" title="TikTok">🎵</a>
         </div>
@@ -317,11 +131,6 @@
   </div>
 </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('page-enter');
-    setTimeout(()=> document.body.classList.remove('page-enter'), 380);
-  });
-</script>
+<script src="/js/common.js"></script>
 </body>
 </html>
