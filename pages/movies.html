@@ -150,57 +150,9 @@
             </a>
     </section>
 </main>
-<script>
-    const filterBtn = document.getElementById('filterBtn');
-    const filterDropdown = document.getElementById('filterDropdown');
-    const filterOptions = document.querySelectorAll('.filter-option');
 
-    filterBtn.addEventListener('click', () => {
-        filterDropdown.classList.toggle('show');
-        filterBtn.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.filter-container')) {
-            filterDropdown.classList.remove('show');
-            filterBtn.classList.remove('active');
-        }
-    });
-
-    filterOptions.forEach(option => {
-        option.addEventListener('click', (e) => {
-            const genre = e.target.dataset.genre;
-
-            filterOptions.forEach(opt => opt.classList.remove('selected'));
-            e.target.classList.add('selected');
-
-            const cards = document.querySelectorAll('.movie-card');
-            cards.forEach(card => {
-                if (genre === 'all') {
-                    card.style.display = '';
-                } else {
-                    const cardGenre = card.dataset.genre || '';
-                    card.style.display = cardGenre.includes(genre) ? '' : 'none';
-                }
-            });
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        document.body.classList.add('page-enter');
-        setTimeout(()=> document.body.classList.remove('page-enter'), 380);
-
-        document.querySelectorAll('.cats a').forEach(a => {
-            a.addEventListener('click', (e) => {
-                const href = a.getAttribute('href');
-                if (!href) return;
-                e.preventDefault();
-                document.body.classList.add('page-exit');
-                setTimeout(()=> window.location.href = href, 320);
-            });
-        });
-    });
-</script>
+<script src="/js/common.js"></script>
+<script src="/js/movies.js"></script>
 
 <footer class="footer">
   <div class="footer-container">
@@ -230,9 +182,9 @@
         <h3>Сотрудничество</h3>
         <ul>
           <li><a href="/pages/partner.html">Стать партнёром</a></li>
-          <li style="margin-top: 16px;"><strong>Социальные сети</strong></li>
+          <li class="footer-social-heading"><strong>Социальные сети</strong></li>
         </ul>
-        <div class="footer-social" style="margin-top: 12px;">
+        <div class="footer-social">
           <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
           <a href="https://tiktok.com" target="_blank" title="TikTok">🎵</a>
         </div>

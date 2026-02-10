@@ -1,0 +1,23 @@
+.offer-page { padding: 40px 20px; max-width: 900px; margin: 50px auto; }
+.offer-header { text-align: center; margin-bottom: 40px; }
+.offer-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+.offer-header p { color: #6b7280; font-size: 16px; }
+.offer-content { background: white; border-radius: 12px; border: 1px solid #e5e7eb; padding: 40px; line-height: 1.8; }
+.offer-content h2 { font-size: 18px; font-weight: 700; margin: 30px 0 20px 0; color: #111; }
+.offer-content h3 { font-size: 16px; font-weight: 700; margin: 20px 0 15px 0; color: #111; }
+.offer-content p { color: #6b7280; font-size: 14px; margin-bottom: 16px; }
+.offer-content ol, .offer-content ul { margin-left: 20px; margin-bottom: 20px; }
+.offer-content li { color: #6b7280; font-size: 14px; margin-bottom: 8px; }
+.offer-content ul li { list-style-type: disc; }
+.offer-content ol { list-style-type: decimal; }
+.offer-section { border-top: 2px solid #e5e7eb; padding-top: 30px; margin-top: 30px; }
+.offer-section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+
+.offer-copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e5e7eb;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 13px;
+}

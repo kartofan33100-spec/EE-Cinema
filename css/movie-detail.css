@@ -233,6 +233,10 @@ tr:hover {
     margin-top: 20px;
 }
 
+.cinema-view.hidden {
+    display: none;
+}
+
 .cinema-list {
     display: flex;
     flex-direction: column;
