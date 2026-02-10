@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/movies.css">
   <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
 <header class="navbar">
@@ -48,68 +49,68 @@
       <button class="filters" id="filterBtn">⚙️ Фильтры</button>
       <div class="filter-dropdown" id="filterDropdown">
         <button class="filter-option" data-genre="all">Все жанры</button>
-        <button class="filter-option" data-genre="pop">Поп</button>
-        <button class="filter-option" data-genre="rock">Рок</button>
+        <button class="filter-option" data-genre="rap">Реп</button>
+        <button class="filter-option" data-genre="national"></button>Казахская</button>
         <button class="filter-option" data-genre="classical">Классика</button>
-        <button class="filter-option" data-genre="electronic">Электро</button>
-        <button class="filter-option" data-genre="kids">Детям</button>
+        <button class="filter-option" data-genre="hiphop">Хип-хоп</button>
+        <button class="filter-option" data-genre="blackrap">Зарубежное</button>
       </div>
     </div>
   </div>
   <section class="movies-grid">
-    <a href="#" class="movie-card" data-genre="pop">
+    <a href="/pages/concert-detail.html?id=0" class="movie-card" data-genre="rap">
       <div class="poster">
-        <span class="price">от 12 000 ₸</span>
+        <span class="price">от 35 000 ₸</span>
         <span class="age">16+</span>
-        <img src="../img/main/concert1.jpg" alt="Концерт 1">
+        <img src="../img/concerts/basta (1).png" alt="Концерт 1">
       </div>
-      <h3>Большой концерт звезды</h3>
-      <p>Поп</p>
+      <h3>Баста в Астане</h3>
+      <p>Реп</p>
     </a>
 
-    <a href="#" class="movie-card" data-genre="rock">
+    <a href="/pages/concert-detail.html?id=1" class="movie-card" data-genre="national">
       <div class="poster">
-        <span class="price">от 25 000 ₸</span>
-        <span class="age">18+</span>
-        <img src="../img/main/concert2.jpg" alt="Концерт 2">
+        <span class="price">от 13 000 ₸</span>
+        <span class="age blue">12+</span>
+        <img src="../img/concerts/sen.png" alt="Концерт 2">
       </div>
-      <h3>Рок-вечер</h3>
-      <p>Рок</p>
+      <h3>СЕН - Айқын Төлепберген</h3>
+      <p>Национальная музыка</p>
     </a>
 
-    <a href="#" class="movie-card" data-genre="classical">
+    <a href="/pages/concert-detail.html?id=2" class="movie-card" data-genre="hiphop">
       <div class="poster">
-        <span class="price">от 8 000 ₸</span>
-        <span class="age">6+</span>
-        <img src="../img/main/concert3.jpg" alt="Концерт 3">
+        <span class="price">от 5 200 ₸</span>
+        <span class="age">16+</span>
+        <img src="../img/concerts/boss (1).png" alt="Концерт 3">
       </div>
-      <h3>Филармония: вечер классики</h3>
+      <h3>Пятерка и Меллшер</h3>
+      <p>Русский хип-хоп</p>
+    </a>
+
+    <a href="/pages/concert-detail.html?id=3" class="movie-card" data-genre="classical">
+      <div class="poster">
+        <span class="price">от 40 000 ₸</span>
+        <span class="age">16+</span>
+        <img src="../img/concerts/morgenshrent.png" alt="Концерт 4">
+      </div>
+      <h3>Моргенштерн: Мировой тур</h3>
       <p>Классика</p>
     </a>
 
-    <a href="#" class="movie-card" data-genre="electronic">
+    <a href="/pages/concert-detail.html?id=4" class="movie-card" data-genre="blackrap">
       <div class="poster">
-        <span class="price">от 15 000 ₸</span>
+        <span class="price">от 30 500 ₸</span>
         <span class="age">16+</span>
-        <img src="../img/main/concert4.jpg" alt="Концерт 4">
+        <img src="../img/concerts/xxx.png" alt="Концерт 5">
       </div>
-      <h3>Электро-ночь</h3>
-      <p>Электронная музыка</p>
-    </a>
-
-    <a href="#" class="movie-card" data-genre="kids">
-      <div class="poster">
-        <span class="price">от 3 500 ₸</span>
-        <span class="age">2+</span>
-        <img src="../img/main/concert5.jpg" alt="Концерт 5">
-      </div>
-      <h3>Детское шоу</h3>
-      <p>Детям</p>
+      <h3>XXXTentacion: Возвращение</h3>
+      <p>Американский рэп</p>
     </a>
   </section>
 </main>
 <script>
-  // copy of filter & page-enter/exit logic adapted for concerts
+ 
   const filterBtn = document.getElementById('filterBtn');
   const filterDropdown = document.getElementById('filterDropdown');
   const filterOptions = document.querySelectorAll('.filter-option');
@@ -158,5 +159,48 @@
     });
   });
 </script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="/index.html">EE Cinema</a>
+        <p>Ваш гид в мир кино</p>
+      </div>
+      <div class="footer-section">
+        <h3>О нас</h3>
+        <ul>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Правила возврата билета</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Публичный договор</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Интересное</h3>
+        <ul>
+          <li><a href="/pages/movies.html">Кино</a></li>
+          <li><a href="/pages/concerts.html">Концерты</a></li>
+          <li><a href="/pages/theatre.html">Театр</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Сотрудничество</h3>
+        <ul>
+          <li><a href="/pages/partner.html">Стать партнёром</a></li>
+          <li style="margin-top: 16px;"><strong>Социальные сети</strong></li>
+        </ul>
+        <div class="footer-social" style="margin-top: 12px;">
+          <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+          <a href="https://tiktok.com" target="_blank" title="TikTok">🎵</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EE Cinema. All rights reserved.</p>
+      <p>Разработано с ❤️ для кинолюбителей</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

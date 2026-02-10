@@ -96,6 +96,13 @@ body {
     cursor: pointer;
 }
 
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 18px;
+}
+
 .pill {
     border: 0;
     border-radius: 999px;
