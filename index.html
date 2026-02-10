@@ -27,17 +27,17 @@
             <button class="navbar__search-btn" type="submit" aria-label="Найти">🔍</button>
         </form>
         <div class="navbar__actions">
-            <a class="navbar__btn navbar__btn--ghost" href="login.html">Войти</a>
+            <a class="navbar__btn navbar__btn--ghost" href="./login.html">Войти</a>
             <a class="navbar__btn navbar__btn--primary" href="register.html">Регистрация</a>
         </div>
     </div>
 </header>
-    <nav class="container categories">
+    <nav class="container_categories">
+        <button class="pill active">Все</button>
         <ul class="cats">
-            <li><a href="/index.html" class="active">Все</a></li>
-            <li><a href="/pages/movies.html">Кино</a></li>
-            <li><a href="/pages/concerts.html">Концерты</a></li>
-            <li><a href="/pages/theatre.html">Театр</a></li>
+            <li><a href="pages/movies.html">Кино</a></li>
+            <li><a href="pages/concerts.html">Концерты</a></li>
+            <li><a href="pages/theatre.html">Театр</a></li>
         </ul>
     </nav>
   <main class="container">
@@ -58,20 +58,5 @@
       </section>
   </main>
   <script src="js/script67.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.cats a').forEach(a => {
-            a.addEventListener('click', (e) => {
-                const href = a.getAttribute('href');
-                if (!href) return;
-                e.preventDefault();
-                document.body.classList.add('page-exit');
-                setTimeout(() => { window.location.href = href; }, 320);
-            });
-        });
-        document.body.classList.add('page-enter');
-        setTimeout(()=> document.body.classList.remove('page-enter'), 380);
-    });
-  </script>
 </body>
 </html> 
