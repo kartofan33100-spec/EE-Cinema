@@ -175,3 +175,18 @@
     background: #10b981;
     color: #fff;
 }
+
+.pill {
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #ede9fe;
+    color: #16a34a;
+}
+
+.pill.active {
+    background: #16a34a;
+    color: #fff;
+}
