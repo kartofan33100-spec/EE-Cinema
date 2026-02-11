@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
       const answer = question.nextElementSibling;
-      // Close all other items
       faqQuestions.forEach(q => {
         if (q !== question) {
           q.classList.remove('active');
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Toggle current item
       question.classList.toggle('active');
       if (answer) answer.classList.toggle('active');
     });

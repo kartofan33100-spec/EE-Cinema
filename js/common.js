@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // page enter animation
   try {
     document.body.classList.add('page-enter');
     setTimeout(()=> document.body.classList.remove('page-enter'), 380);
   } catch (e) {}
 
-  // category links transition (applies where .cats exists)
   try {
     document.querySelectorAll('.cats a').forEach(a => {
       a.addEventListener('click', (e) => {

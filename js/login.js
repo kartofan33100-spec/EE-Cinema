@@ -32,7 +32,6 @@ function handleLogin() {
 
         let ok = true;
 
-        // email
         if (!email.value.trim()) {
             showError(email, "Введите email");
             ok = false;
@@ -43,7 +42,6 @@ function handleLogin() {
             clearError(email);
         }
 
-        // password
         if (!password.value.trim()) {
             showError(password, "Введите пароль");
             ok = false;
@@ -51,7 +49,6 @@ function handleLogin() {
             clearError(password);
         }
 
-        // city
         if (!city.value.trim()) {
             showError(city, "Введите город");
             ok = false;
@@ -59,7 +56,6 @@ function handleLogin() {
             clearError(city);
         }
 
-        // checkbox
         const agreeErr = document.getElementById("agreeError");
         if (!agree.checked) {
             if (agreeErr) agreeErr.textContent = "Нужно принять правила сервиса";
@@ -77,7 +73,7 @@ function handleLogin() {
         };
 
         console.log("LOGIN:", data);
-        alert("Вход успешен ✅ (смотри консоль)");
+        alert("Вход успешен");
         showResult(document.getElementById("loginResult"), `Вход успешен: ${data.email} (${data.city})`);
         form.reset();
     });
@@ -94,11 +90,10 @@ function handleRegister() {
         const email = form.elements["email"];
         const password = form.elements["password"];
         const agree = form.elements["agree"];
-        const role = form.elements["role"]; // radio group
+        const role = form.elements["role"]; 
 
         let ok = true;
 
-        // name
         if (!name.value.trim()) {
             showError(name, "Введите имя");
             ok = false;
@@ -106,7 +101,6 @@ function handleRegister() {
             clearError(name);
         }
 
-        // email
         if (!email.value.trim()) {
             showError(email, "Введите email");
             ok = false;
@@ -117,7 +111,6 @@ function handleRegister() {
             clearError(email);
         }
 
-        // password
         if (!password.value.trim()) {
             showError(password, "Введите пароль");
             ok = false;
@@ -125,7 +118,6 @@ function handleRegister() {
             clearError(password);
         }
 
-        // radio обязательный (добавили как доп. условие)
         const roleErr = document.getElementById("roleError");
         const roleValue = form.querySelector('input[name="role"]:checked')?.value;
         if (!roleValue) {
@@ -135,7 +127,6 @@ function handleRegister() {
             if (roleErr) roleErr.textContent = "";
         }
 
-        // checkbox обязательный
         const agreeErr = document.getElementById("agreeErrorReg");
         if (!agree.checked) {
             if (agreeErr) agreeErr.textContent = "Нужно согласиться с условиями";
@@ -154,7 +145,7 @@ function handleRegister() {
         };
 
         console.log("REGISTER:", data);
-        alert("Регистрация успешна ✅ (смотри консоль)");
+        alert("Регистрация успешна");
         showResult(
             document.getElementById("registerResult"),
             `Аккаунт создан: ${data.name} — ${data.email} (${data.role})`

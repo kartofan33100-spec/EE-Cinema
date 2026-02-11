@@ -1,4 +1,3 @@
-// Movie detail page script (extracted from inline script)
 const movieData = {
     '7lives': {
         title: 'Семь Жизней',

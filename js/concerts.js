@@ -1,4 +1,3 @@
-// Concerts page script (extracted from inline script)
 const filterBtn = document.getElementById('filterBtn');
 const filterDropdown = document.getElementById('filterDropdown');
 const filterOptions = document.querySelectorAll('.filter-option');
@@ -8,7 +7,6 @@ if (filterBtn && filterDropdown) {
         filterDropdown.classList.toggle('show');
         filterBtn.classList.toggle('active');
     });
-
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.filter-container')) {
             filterDropdown.classList.remove('show');
