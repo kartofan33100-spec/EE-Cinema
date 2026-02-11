@@ -45,84 +45,23 @@
 <main class="container movies-page">
     <div class="movies-header">
         <h1>Театр</h1>
-        <button class="filters">⚙️ Фильтры</button>
+        <div class="filter-container">
+            <button class="filters" id="filterBtn">⚙️ Фильтры</button>
+            <div class="filter-dropdown" id="filterDropdown">
+                <button class="filter-option selected" data-genre="all">Все</button>
+                <button class="filter-option" data-genre="comedy">Комедия</button>
+                <button class="filter-option" data-genre="drama">Драма</button>
+                <button class="filter-option" data-genre="poetry">Поэзия</button>
+                <button class="filter-option" data-genre="art">Арт</button>
+                <button class="filter-option" data-genre="experimental">Эксперимент</button>
+                <button class="filter-option" data-genre="music">Музыкальное</button>
+                <button class="filter-option" data-genre="modern">Современное</button>
+                <button class="filter-option" data-genre="tragicomedy">Трагикомедия</button>
+            </div>
+        </div>
     </div>
-    <section class="movies-grid">
-        <a href="/pages/theatre-detail.html?id=0" class="movie-card">
-            <div class="poster">
-                <span class="rating green">9.0 ★</span>
-                <span class="age">18+</span>
-                <img src="../img/theatre/Obman.png" alt="">
-            </div>
-            <h3>Невинный обман</h3>
-            <p>комедия</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=1" class="movie-card">
-            <div class="poster">
-                <span class="rating green">8.3 ★</span>
-                <span class="age blue">12+</span>
-                <img src="../img/theatre/monospektakl.png" alt="">
-            </div>
-            <h3>Поэтический моноспектакль</h3>
-            <p>драма • поэзия</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=2" class="movie-card">
-            <div class="poster">
-                <span class="rating green">9.3 ★</span>
-                <span class="age blue">12+</span>
-                <img src="../img/theatre/dogheart.png" alt="">
-            </div>
-            <h3>Собачье сердце</h3>
-            <p>драма</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=3" class="movie-card">
-            <div class="poster">
-                <span class="rating green">8.9 ★</span>
-                <span class="age">16+</span>
-                <img src="../img/theatre/mechta.png" alt="">
-            </div>
-            <h3>Мечта</h3>
-            <p>арт-спектакль</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=4" class="movie-card">
-            <div class="poster">
-                <span class="rating green">9.1 ★</span>
-                <span class="age">16+</span>
-                <img src="../img/theatre/teatral_art.png" alt="">
-            </div>
-            <h3>Театральная арт-терапия</h3>
-            <p>экспериментальный</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=5" class="movie-card">
-            <div class="poster">
-                <span class="rating green">8.7 ★</span>
-                <span class="age">18+</span>
-                <img src="../img/theatre/liveblueskesh.png" alt="">
-            </div>
-            <h3>Live Blues Kesh</h3>
-            <p>музыкальное действо</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=6" class="movie-card">
-            <div class="poster">
-                <span class="rating green">9.4 ★</span>
-                <span class="age">18+</span>
-                <img src="../img/theatre/jivotnoe.png" alt="">
-            </div>
-            <h3>Животное</h3>
-            <p>современный спектакль</p>
-        </a>
-        <a href="/pages/theatre-detail.html?id=7" class="movie-card">
-            <div class="poster">
-                <span class="rating green">8.6 ★</span>
-                <span class="age">16+</span>
-                <img src="../img/theatre/sirota.png" alt="">
-            </div>
-            <h3>Премьера! "Сиротливый зал"</h3>
-            <p>трагикомедия</p>
-        </a>
-    </section>
+    <section class="movies-grid"></section>
 </main>
-
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-content">
@@ -161,5 +100,6 @@
     </div>
   </div>
 </footer>
+<script src="/js/theatre.js"></script>
 </body>
 </html>
